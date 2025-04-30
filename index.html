@@ -8,36 +8,86 @@
 </head>
 <body>
     <header>
+        <video autoplay loop muted id="video-background">
+            <source src="taman kehati.mp4" type="video/mp4">
+        </video>
         <nav>
-            <h1>Desa Modang</h1>
+            <img src="logo.png" alt="Logo" class="logo">
             <ul>
-                <li><a href="#">Demos</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Projects</a></li>
-                <li><a href="#">All Pages</a></li>
-                <li><a href="#" class="cta">Let's Talk</a></li>
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#">Tentang Taman</a></li>
+                <li><a href="#">Keanekaragaman Hayati</a></li>
+                <li><a href="#">Galeri</a></li>
+                <li><a href="#">Kegiatan</a></li>
+                <li><a href="#">Edukasi</a></li>
+                <li><a href="#" class="cta">Kontak</a></li>
             </ul>
         </nav>
         <div class="hero">
-            <h2>We take care of your garden & tree</h2>
-            <p>Garden Tree is a dedicated tree care company dedicated to providing innovative gardening solutions.</p>
+            
+            <h2>Jelajahi Dunia Keanekaragaman Hayati</h2>
+            <p>Satu taman, berjuta kehidupan temukan semuanya di ujung jarimu.</p>
             <div class="cta-buttons">
-                <a href="#" class="cta outline">Visit in Touch</a>
-                <a href="#" class="cta">View the site</a>
-            </div>
+                <a href="#kunjungan" class="cta outline">Rencanakan Kunjungan</a>
+                <a href="#keanekaragaman" class="cta">Lihat Keanekaragaman</a>
+            </div>            
         </div>
     </header>
 
     <main>
         <section class="services">
             <div class="service-item">
-                <h3>Native Plant Nursery</h3>
-                <p>Quality native plants for sustainable landscapes</p>
+                <h3>Peta Kondisi Prasarana</h3>
+                <p>Menampilkan peta interaktif yang menunjukkan kondisi prasarana pelestarian keanekaragaman hayati di kawasan konservasi.</p>
+                <img src="peta kondisi prasarana.jpg" alt="Peta Kondisi Prasarana" class="service-image">
+                <div id="map"></div>
+              
+                <!-- Tambahan Fitur -->
+                <div class="filters-vertikal">
+                    <label><input type="checkbox" checked> Titik Koordinat Batas Lokasi</label>
+                    <label><input type="checkbox"> Rencana Lokasi Taman Kehati</label>
+                    <label><input type="checkbox"> Fungsi Kawasan</label>
+                    <label><input type="checkbox"> Sungai</label><br>
+                    <label><input type="checkbox"> Jalan</label>
+                    <label><input type="checkbox"> Batas Administrasi</label>
+                    <label><input type="checkbox"> Lokasi Permukiman</label>
+                  </div>                  
+              
+                <div class="info-box">
+                  <p><strong>Klik titik di peta</strong> untuk melihat status, kondisi, dan usulan pembangunan atau perbaikan.</p>
+                </div>
+              </div>
+              
+              <div class="service-item">
+                <h3>Peran Prasarana dalam Pelestarian Keanekaragaman Hayati: Peta, Status, dan Kebutuhan</h3>
+                <p>Visualisasi batas kawasan konservasi, tumpang tindih lahan, dan analisis kebutuhan zonasi.</p>
+                <img src="peta penandaan batas.jpg" alt="Peta Kondisi Prasarana" class="service-image">
+              
+                <div id="boundary-map"></div>
+              
+                <div class="layers">
+                    <label><input type="checkbox" checked> Rute Penandaan Batas</label>
+                    <label><input type="checkbox" checked> Titik Koordinat (Pal)</label>
+                    <label><input type="checkbox"> Fungsi Kawasan (Hutan Lindung, Produksi, dll)</label><br>
+                    <label><input type="checkbox"> Jalan (Nasional, Provinsi, Perusahaan)</label>
+                    <label><input type="checkbox"> Sungai</label>
+                    <label><input type="checkbox"> Batas Administrasi Desa</label>
+                    <label><input type="checkbox"> Lokasi Ibu Kota Desa</label>
+                  </div>
+                  
+              
+                <div class="alert-box">
+                  <p><strong>Catatan:</strong> Banyak kawasan belum memiliki batas resmi. Gunakan peta ini untuk identifikasi dan advokasi penetapan batas hukum.</p>
+                </div>
+              </div>
+              
+            <div class="service-item">
+                <h3>Eco-Friendly Landscaping</h3>
+                <p>Sustainable design and implementation</p>
             </div>
             <div class="service-item">
-                <h3>Gardening Consultation</h3>
-                <p>Expert advice for your green spaces</p>
+                <h3>Eco-Friendly Landscaping</h3>
+                <p>Sustainable design and implementation</p>
             </div>
             <div class="service-item">
                 <h3>Eco-Friendly Landscaping</h3>
