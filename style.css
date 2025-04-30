@@ -1,0 +1,179 @@
+/* Base Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                url('https://cdn-1.timesmedia.co.id/images/2023/12/28/hutan.jpg') ;
+    color: white;
+    padding: 2rem 1rem;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.cta {
+    background: #4CAF50;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    transition: all 0.3s;
+}
+
+.cta.outline {
+    background: transparent;
+    border: 2px solid white;
+    margin-right: 1rem;
+}
+
+.hero {
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem 1rem;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Services Section */
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding: 0 1rem;
+}
+
+.service-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.service-item h3 {
+    color: #4CAF50;
+    margin: 1rem 0;
+}
+
+/* Welcome Section */
+.welcome {
+    text-align: center;
+    padding: 4rem 1rem;
+    background: #f9f9f9;
+}
+
+.welcome h2 {
+    font-size: 2.2rem;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 3rem auto;
+}
+
+.stat {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.number {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #4CAF50;
+    margin-bottom: 0.5rem;
+}
+
+/* Process Section */
+.process {
+    background: #4CAF50;
+    color: white;
+    padding: 4rem 1rem;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.process-item {
+    text-align: center;
+    padding: 2rem;
+}
+
+.process-item .number {
+    font-size: 2rem;
+    background: white;
+    color: #4CAF50;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 4rem;
+}
