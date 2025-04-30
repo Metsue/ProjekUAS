@@ -11,6 +11,7 @@ body {
 header {
     position: relative;
     color: white;
+    font-weight: bold;
     padding: 2rem 1rem;
     min-height: 80vh;
     display: flex;
