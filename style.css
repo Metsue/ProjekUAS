@@ -92,11 +92,20 @@ img {
 .section-subtitle {
     font-size: 1.1rem;
     text-align: justify;
-    color: var(--white);
+    color: var(--gray);
     margin-bottom: 3rem;
     max-width: 700px;
     margin-right: auto;
 }
+
+.subtitle-utama {
+    color: var(--gray)
+  }
+  
+  .subtitle-bawah {
+    color: var(--white)
+  }
+  
 
 /* Buttons */
 .cta {
@@ -183,13 +192,11 @@ nav {
 .logo-1 {
     height: 80px;
     width: auto;
-    transition: transform 0.3s ease;
 }
 
 .logo-2 {
     height: 60px;
     width: auto;
-    transition: transform 0.3s ease;
 }
 
 .logo:hover {
@@ -1328,4 +1335,3 @@ form textarea {
     height: 100%;
     object-fit: cover;
 }
-    
