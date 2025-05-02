@@ -328,7 +328,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('current-year').textContent = new Date().getFullYear();
 });
 
-// ==================== Slide ====================
+// ==================== SLIDE ====================
 let geserPosisi = 0;
 const slider = document.getElementById('sliderAparatur');
 const cardWidth = 215; // 200px card + 15px gap
@@ -347,7 +347,7 @@ function geserKiri() {
   }
 }
 
-// ==================== Galeri ====================
+// ==================== GALLERY ====================
 function openLightbox(img) {
     document.getElementById("lightbox").style.display = "block";
     document.getElementById("lightbox-img").src = img.src;
