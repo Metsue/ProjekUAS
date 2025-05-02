@@ -8,37 +8,36 @@
     
     <title>Desa Wisata Modang | Kalimantan Timur</title>
     
-    <!-- Favicon -->
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     
-    <!-- Fonts -->
+    <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Icons -->
+    <!-- icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
-    <!-- Map Library -->
+    <!-- map library -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
     
-    <!-- Main CSS -->
+    <!-- main CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- Header Section -->
+    <!-- header section -->
     <header>
-        <div class="video-overlay"></div>
-        <video autoplay loop muted playsinline id="video-background">
-            <source src="vid/taman kehati.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-        </video>
+        <div class="img-background"></div>
         
         <nav>
             <div class="nav-container">
                 <a href="index.html" class="logo-link">
-                    <img src="img/logo.png" alt="Logo Desa Modang" class="logo">
+                    <img src="img/logo.png" alt="Logo Taman Kehati" class="logo logo-1">
+                    <img src="logo kabpaser.png" alt="Logo Taman Kehati" class="logo logo-2">
                 </a>
+                
                 
                 <div class="mobile-menu-toggle">
                     <i class="fas fa-bars"></i>
@@ -57,11 +56,12 @@
         </nav>
         
         <div class="hero">
-            <h1 style="color: white;">Desa Wisata Modang</h1>
-            <h2 style="color: white;">Jelajahi Keindahan Alam dan Budaya Kaltim</h2>
-            <p>Selamat datang di surga tersembunyi Kalimantan Timur, tempat keanekaragaman hayati bertemu dengan kearifan lokal yang mempesona.</p>
+            <h1 style="color: white;">Menjelajah Keanekaragaman Hayati
+</h1>
+            <h2 style="color: white;">Satu taman, berjuta kehidupan temukan semuanya di ujung jarimu.</h2>
+            <p>Selamat datang di Kalimantan Timur, di mana alam tak hanya indah, tapi juga bijak memeluk keanekaragaman dan merawat warisan budaya dalam damai.</p>
             <div class="cta-buttons">
-                <a href="#wisata" class="cta outline">Jelajahi Wisata</a>
+                <a href="#wisata" class="cta outline">Jelajahi Tempat</a>
                 <a href="#peta" class="cta">Lihat Peta</a>
             </div>
         </div>
@@ -71,13 +71,12 @@
         <!-- Destinasi Wisata Section -->
         <section class="services" id="wisata">
             <div class="container">
-                <h2 class="section-title">Destinasi Unggulan Desa Modang</h2>
-                <p class="section-subtitle">Temukan keindahan alam yang memukau di Desa Modang</p>
-                
+                <h2 class="section-title">Destinasi Keanekaragaman Hayati</h2>
+                <p class="section-subtitle">Temukan tempat yang menyatukan alam dan kearifan lokal, dengan fasilitas yang mendukung pelestarian keanekaragaman hayati, batas kawasan yang jelas, serta perencanaan vegetasi dan infrastruktur yang ramah lingkungan.</p>
                 <div class="services-container">
                     <div class="service-item">
                         <div class="service-image-container">
-                            <img src="img/peta kondisi prasarana.jpg" alt="Peta Kondisi Prasarana" class="service-image" loading="lazy">
+                            <img src="peta kondisi prasarana.jpg" alt="Peta Kondisi Prasarana" class="service-image" loading="lazy">
                             <div class="image-overlay">
                                 <a href="peta.html" class="view-more">Lihat Detail</a>
                             </div>
@@ -88,55 +87,158 @@
                             <span><i class="fas fa-map-marked-alt"></i> Peta Interaktif</span>
                             <span><i class="fas fa-info-circle"></i> Info Prasarana</span>
                         </div>
+                        <div class="service-status">
+                            <p><strong>Status:</strong> Beberapa fasilitas memerlukan perbaikan. Berikut adalah fasilitas yang memerlukan perbaikan:</p>
+                            <div class="filters">
+                                <label><input type="checkbox" name="repair" value="akses-jalan" checked> Perbaikan akses jalan</label><br>
+                                <label><input type="checkbox" name="repair" value="akses-tangga-air-terjun" checked> Perbaikan akses tangga menuju air terjun</label><br>
+                                <label><input type="checkbox" name="repair" value="gajebo" checked> Penambahan gazebo</label><br>
+                                <label><input type="checkbox" name="repair" value="parkir" checked> Penambahan fasilitas parkir</label><br>
+                                <label><input type="checkbox" name="repair" value="mushola" checked> Penambahan mushola</label><br>
+                                <label><input type="checkbox" name="repair" value="wc-umum" checked> Penambahan wc umum</label><br>
+                            </div>
+                        </div>
                     </div>
                     
                     <div class="service-item">
                         <div class="service-image-container">
-                            <img src="img/air terjun olo.jpg" alt="Air Terjun Dinding Olo" class="service-image" loading="lazy">
+                            <img src="peta penandaan batas.jpg" alt="Air Terjun Dinding Olo" class="service-image" loading="lazy">
                             <div class="image-overlay">
                                 <a href="air-terjun-olo.html" class="view-more">Lihat Detail</a>
                             </div>
                         </div>
-                        <h3>Air Terjun Dinding Olo</h3>
-                        <p>Air terjun setinggi 30 meter dengan formasi batuan unik yang menciptakan dinding air yang spektakuler, dikelilingi hutan tropis yang asri.</p>
+                        <h3>Peta dan Pelaporan Batas Kawasan Konservasi</h3>
+                        <p>Temukan informasi mengenai batas kawasan konservasi yang jelas, serta laporkan aktivitas yang berpotensi merusak lingkungan di sekitar kawasan tersebut.</p>
                         <div class="service-features">
-                            <span><i class="fas fa-water"></i> Air Terjun</span>
-                            <span><i class="fas fa-hiking"></i> Trekking</span>
+                            <span><i class="fas fa-map-marked-alt"></i> Batas Kawasan Belum Jelas</span>
+                            <span><i class="fas fa-exclamation-circle"></i> Tumpang Tindih Lahan</span>
+                            <span><i class="fas fa-leaf"></i> Ancaman Terhadap Flora dan Fauna</span>
+                        </div>
+                        <div class="service-status">
+                            <p><strong>Status:</strong> Beberapa kawasan konservasi perlu pemetaan ulang batasnya. Klik untuk melihat peta dan melaporkan pelanggaran.</p>
+                            <div class="filters">
+                                <label><input type="checkbox" name="report" value="pembukaan-lahan"> Pembukaan lahan ilegal</label><br>
+                                <label><input type="checkbox" name="report" value="penebangan"> Penebangan pohon liar</label><br>
+                                <label><input type="checkbox" name="report" value="pembangunan"> Pembangunan yang merusak kawasan</label><br>
+                            </div>
                         </div>
                     </div>
                     
                     <div class="service-item">
                         <div class="service-image-container">
-                            <img src="img/pohon ulin.jpg" alt="Pohon Ulin Raksasa" class="service-image" loading="lazy">
+                            <img src="kaltim.jpeg" alt="Pohon Ulin Raksasa" class="service-image" loading="lazy">
                             <div class="image-overlay">
                                 <a href="pohon-ulin.html" class="view-more">Lihat Detail</a>
                             </div>
                         </div>
-                        <h3>Pohon Ulin Raksasa</h3>
-                        <p>Pohon ulin berusia ratusan tahun dengan diameter lebih dari 2 meter, menjadi bukti kekayaan hutan tropis Kalimantan yang perlu dilestarikan.</p>
+                        <h3>Desain Vegetasi</h3>
+                        <p>Panduan desain vegetasi yang mempertimbangkan keanekaragaman tanaman lokal, serta fungsi ekologis penting seperti penyerap polusi, penahan erosi, dan penyimpan air.</p>
                         <div class="service-features">
-                            <span><i class="fas fa-tree"></i> Flora Langka</span>
-                            <span><i class="fas fa-history"></i> Usia Ratusan Tahun</span>
+                            <span><i class="fas fa-leaf"></i> Panduan Desain Vegetasi Lokal</span>
+                            <span><i class="fas fa-tint"></i> Fungsi Ekologis Tanaman</span>
+                            <span><i class="fas fa-tree"></i> Rencana Desain Vegetasi untuk Berbagai Area</span>
+                        </div>
+                        <div class="service-status">
+                            <p><strong>Status:</strong> Saat ini tersedia panduan untuk desain vegetasi lokal yang cocok untuk ruang terbuka hijau, taman desa, dan pinggir jalan. Klik untuk melihat detail lebih lanjut dan rencana vegetasi yang sesuai.</p>
                         </div>
                     </div>
                     
                     <div class="service-item">
                         <div class="service-image-container">
-                            <img src="img/air terjun doyam seriam.jpg" alt="Air Terjun Doyam Seriam" class="service-image" loading="lazy">
+                            <img src="pohon ulin.jpg" alt="Air Terjun Doyam Seriam" class="service-image" loading="lazy">
                             <div class="image-overlay">
                                 <a href="air-terjun-doyam.html" class="view-more">Lihat Detail</a>
                             </div>
                         </div>
-                        <h3>Air Terjun Doyam Seriam</h3>
-                        <p>Air terjun bertingkat dengan kolam alami yang jernih, cocok untuk berenang dan menikmati kesegaran alam pedalaman Kalimantan.</p>
+                        <h3>Rencana Desain Struktur Ramah Lingkungan</h3>
+                        <p>Desain infrastruktur yang mempertimbangkan dampak terhadap satwa dan keanekaragaman hayati, serta mendukung konservasi mikro habitat.</p>
                         <div class="service-features">
-                            <span><i class="fas fa-swimming-pool"></i> Kolam Alami</span>
-                            <span><i class="fas fa-camera"></i> Spot Foto</span>
+                            <span><i class="fas fa-paw"></i> Perlintasan Satwa yang Aman</span>
+                            <span><i class="fas fa-leaf"></i> Fasilitas Ramah Lingkungan</span>
+                            <span><i class="fas fa-building"></i> Arsitektur Hijau dan Infrastruktur</span>
+                        </div>
+                        <div class="service-status">
+                            <p><strong>Status:</strong> Fasilitas dan infrastruktur yang mendukung konservasi satwa dan vegetasi sedang dalam tahap perencanaan. Klik untuk melihat lebih lanjut tentang desain ramah lingkungan.</p>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <!-- Galeri -->
+            <div class="box">
+                <span style="--i:1"><img src="picture1.jpg" alt="foto 1"></span>
+                <span style="--i:2"><img src="picture2.jpg" alt="foto 1"></span>
+                <span style="--i:3"><img src="picture3.jpg" alt="foto 1"></span>
+                <span style="--i:4"><img src="picture4.jpg" alt="foto 1"></span>
+                <span style="--i:5"><img src="picture5.jpg" alt="foto 1"></span>
+                <span style="--i:6"><img src="picture6.jpg" alt="foto 1"></span>
+                <span style="--i:7"><img src="picture7.jpg" alt="foto 1"></span>
+                <span style="--i:8"><img src="picture8.jpg" alt="foto 1"></span>
+                <span style="--i:9"><img src="picture9.jpg" alt="foto 1"></span>
+                <span style="--i:10"><img src="air terjun doyam seriam.jpg" alt="foto 1"></span>
+                <span style="--i:11"><img src="air terjun olo.jpg" alt="foto 1"></span>
+            </div>
+
+            <!-- Video YouTube, posisi bebas -->
+                <div style="
+                    position: absolute;
+                    top: 111rem; /* atur naik/turun */
+                    right: 10PX;   /* tempel di kanan */
+                    width: 805px;
+                ">
+                <iframe width="100%" height="300"
+                    src="https://www.youtube.com/embed/UJeG-ecuZ7I"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+                </div>
+            </div>
+
+            
         </section>
+
+        <div class="container-aparatur">
+            <h3>👤 Profil Pengelola Taman Keanekaragaman Hayati</h3>
+            <div class="marquee-wrapper">
+              <div class="marquee-content">
+                <div class="card">
+                  <img src="dina.jpg" alt="Dina Wahyuni">
+                  <div class="jabatan">KASI KESEJAHTERAAN</div>
+                  <div class="nama">DINA WAHYUNI</div>
+                </div>
+                <div class="card">
+                  <img src="mageni.jpg" alt="Mageni Karsa Saidul">
+                  <div class="jabatan">KASI PEMERINTAHAN</div>
+                  <div class="nama">MAGENI KARSA SAIDUL, S.Kom</div>
+                </div>
+                <div class="card">
+                  <img src="sadani.jpg" alt="Sadani Noor Elyati">
+                  <div class="jabatan">KASI PELAYANAN</div>
+                  <div class="nama">SADANI NOOR ELYATI PURBA, S.Si</div>
+                </div>
+                <div class="card">
+                  <img src="nurasyiah.jpg" alt="Nur Asyiah">
+                  <div class="jabatan">KAUR KEUANGAN</div>
+                  <div class="nama">NUR ASYIAH, S.IP</div>
+                </div>
+          
+                <!-- Duplikat untuk looping -->
+                <div class="card">
+                  <img src="dina.jpg" alt="Dina Wahyuni">
+                  <div class="jabatan">KASI KESEJAHTERAAN</div>
+                  <div class="nama">DINA WAHYUNI</div>
+                </div>
+                <div class="card">
+                  <img src="mageni.jpg" alt="Mageni Karsa Saidul">
+                  <div class="jabatan">KASI PEMERINTAHAN</div>
+                  <div class="nama">MAGENI KARSA SAIDUL, S.Kom</div>
+                </div>
+              </div>
+            </div>
+          </div>
+                   
 
         <!-- Tentang Desa Section -->
         <section class="welcome" id="tentang">
@@ -144,15 +246,22 @@
                 <div class="welcome-container">
                     <div class="welcome-content">
                         <h2 class="section-title">Selamat Datang di Desa Modang</h2>
-                        <p>Desa Modang adalah permata tersembunyi di Kalimantan Timur yang menawarkan pengalaman wisata alam yang autentik. Terletak di tengah hutan tropis yang kaya akan keanekaragaman hayati, desa ini menjadi rumah bagi berbagai spesies flora dan fauna endemik Kalimantan.</p>
-                        <p>Dengan budaya Dayak yang masih terjaga dan panorama alam yang memukau, Desa Modang menawarkan pengalaman wisata yang berbeda - dari petualangan trekking ke air terjun, pengamatan satwa liar, hingga belajar langsung tentang kearifan lokal masyarakat Dayak.</p>
+                        <p>
+                            Terletak di Kecamatan Kuaro, Kabupaten Paser, Kalimantan Timur, Desa Modang menjadi salah satu gerbang 
+                            alami menuju kekayaan hayati Borneo. Di desa ini berdiri <strong>Taman Keanekaragaman Hayati (Kehati)</strong>, 
+                            sebuah ruang konservasi dan edukasi yang dikelola oleh <strong>Bidang Tata Lingkungan</strong>, sebagai wujud nyata pelestarian 
+                            flora dan fauna endemik di Kalimantan.
+                        </p> 
+                        <p>
+                            Dengan lanskap hijau yang masih asri dan keanekaragaman hayati yang tinggi ini dapat menghadirkan 
+                            suasana tenang sekaligus menyadarkan pentingnya menjaga keseimbangan ekosistem untuk masa depan.
+                        </p>
                         <a href="tentang.html" class="cta">Tentang Kami <i class="fas fa-arrow-right"></i></a>
                     </div>
                     
                     <div class="welcome-video-container">
                         <video autoplay loop muted playsinline>
-                            <source src="vid/pemandangan-modang.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
+                            <source src="taman kehati.mp4" type="video/mp4">
                         </video>
                     </div>
                 </div>
@@ -183,7 +292,7 @@
                 <div class="container">
                     <div class="section-header">
                         <h2 class="section-title">Peta Interaktif Desa Modang</h2>
-                        <p class="section-subtitle">Jelajahi kawasan wisata dan konservasi Desa Modang</p>
+                        <p class="section-subtitle">Jelajahi Kawasan Taman Keanekaragaman Hayati dan Konservasi Desa Modang</p>
                     </div>
                     
                     <div class="map-container">
@@ -280,7 +389,19 @@
             </div>
         </section>
 
-        <!-- Testimonial Section -->
+        <!-- Komentar untuk pengunjung -->
+          <form>
+            <h3 style="color: white;"><b>KIRIM KOMENTAR</b></h3>
+            <label style="color: white;">Nama</label>
+            <input type="text">
+
+            <label style="color: white;">Komentar</label>
+            <textarea rows="4" placeholder="Silahkan tulis komentar anda..." required></textarea>
+          
+            <button class="submit-btn">Kirim</button>
+          </form>
+
+        <!-- Testimoni dari pengunjung -->
         <section class="testimonials">
             <div class="container">
                 <div class="section-header">
@@ -296,7 +417,7 @@
                             </div>
                             <p>"Air Terjun Dinding Olo adalah salah satu yang terindah yang pernah saya lihat. Perjalanan trekking menuju ke sana melalui hutan tropis yang masih asli membuat pengalaman semakin berkesan."</p>
                             <div class="testimonial-author">
-                                <img src="img/testimonial1.jpg" alt="Andi Wijaya" loading="lazy">
+                                <img src="testimonial1.jpg" alt="Andi Wijaya" loading="lazy">
                                 <div class="author-info">
                                     <h4>Andi Wijaya</h4>
                                     <span>Travel Blogger</span>
@@ -304,7 +425,7 @@
                             </div>
                         </div>
                     </div>
-                    
+                  
                     <div class="testimonial-item">
                         <div class="testimonial-content">
                             <div class="quote-icon">
@@ -312,7 +433,7 @@
                             </div>
                             <p>"Pohon Ulin raksasa di Desa Modang sungguh mengagumkan. Melihat langsung pohon yang menjadi ikon Kalimantan ini membuat saya semakin sadar akan pentingnya pelestarian hutan."</p>
                             <div class="testimonial-author">
-                                <img src="img/testimonial2.jpg" alt="Sarah Fitriani" loading="lazy">
+                                <img src="testimonial2.jpg" alt="Sarah Fitriani" loading="lazy">
                                 <div class="author-info">
                                     <h4>Sarah Fitriani</h4>
                                     <span>Fotografer Alam</span>
@@ -328,7 +449,7 @@
                             </div>
                             <p>"Budaya masyarakat Dayak di Desa Modang masih sangat autentik. Saya belajar banyak tentang kearifan lokal dalam menjaga kelestarian alam selama tinggal di sini."</p>
                             <div class="testimonial-author">
-                                <img src="img/testimonial3.jpg" alt="Budi Santoso" loading="lazy">
+                                <img src="testimonial3.jpg" alt="Budi Santoso" loading="lazy">
                                 <div class="author-info">
                                     <h4>Budi Santoso</h4>
                                     <span>Peneliti Etnografi</span>
@@ -345,7 +466,7 @@
             </div>
         </section>
 
-        <!-- CTA Section -->
+        <!-- CTA section -->
         <section class="cta-section">
             <div class="container">
                 <div class="cta-container">
@@ -360,13 +481,13 @@
         </section>
     </main>
 
-    <!-- Footer -->
+    <!-- footer -->
     <footer>
         <div class="container">
             <div class="footer-container">
                 <div class="footer-col">
-                    <img src="img/logo-white.png" alt="Logo Desa Modang" class="footer-logo" loading="lazy">
-                    <p>Desa Wisata Modang, Kalimantan Timur. Menjaga alam, merawat budaya, menyambut wisatawan dengan hangat.</p>
+                    <img src="logo.png" alt="Logo Taman Kehati" class="footer-logo" loading="lazy">
+                    <p>Ruang hidup alami yang menyatukan flora, fauna, dan kearifan lokal menjadi warisan penting untuk generasi mendatang.</p>
                     <div class="social-links">
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -399,7 +520,7 @@
                 <div class="footer-col">
                     <h3>Kontak Kami</h3>
                     <ul class="contact-info">
-                        <li><i class="fas fa-map-marker-alt"></i> Desa Modang, Kec. Muara Ancalong, Kutai Timur, Kalimantan Timur</li>
+                        <li><i class="fas fa-map-marker-alt"></i>  Desa Modang, Kecamatan Kuaro, Kabupaten Paser, Kalimantan Timur</li>
                         <li><i class="fas fa-phone-alt"></i> +62 812 3456 7890</li>
                         <li><i class="fas fa-envelope"></i> info@desamodang.id</li>
                     </ul>
@@ -407,15 +528,15 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; <span id="current-year"></span> Desa Wisata Modang. All rights reserved.</p>
+                <p>&copy; <span id="current-year"></span> Tata Lingkungan. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript Libraries -->
+    <!-- JavaScript libraries -->
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     
-    <!-- Main JavaScript -->
-    <script src="js/script.js"></script>
+    <!-- Main javaScript -->
+    <script src="script.js"></script>
 </body>
 </html>

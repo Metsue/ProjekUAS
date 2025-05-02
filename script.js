@@ -327,3 +327,32 @@ document.addEventListener('DOMContentLoaded', function() {
     // ==================== CURRENT YEAR IN FOOTER ====================
     document.getElementById('current-year').textContent = new Date().getFullYear();
 });
+
+// ==================== Slide ====================
+let geserPosisi = 0;
+const slider = document.getElementById('sliderAparatur');
+const cardWidth = 215; // 200px card + 15px gap
+
+function geserKanan() {
+  if (geserPosisi > -(slider.scrollWidth - slider.clientWidth)) {
+    geserPosisi -= cardWidth;
+    slider.style.transform = `translateX(${geserPosisi}px)`;
+  }
+}
+
+function geserKiri() {
+  if (geserPosisi < 0) {
+    geserPosisi += cardWidth;
+    slider.style.transform = `translateX(${geserPosisi}px)`;
+  }
+}
+
+// ==================== Galeri ====================
+function openLightbox(img) {
+    document.getElementById("lightbox").style.display = "block";
+    document.getElementById("lightbox-img").src = img.src;
+  }
+
+  function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+  }
