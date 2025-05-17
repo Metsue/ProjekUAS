@@ -1,11 +1,172 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="description" content="Desa Wisata Modang - Jelajahi keindahan alam dan budaya Kalimantan Timur">
+    <meta name="keywords" content="desa wisata, modang, kalimantan timur, wisata alam, air terjun, budaya dayak">
+
+    <title>Desa Wisata Modang | Kalimantan Timur</title>
+
+    <!-- favicon -->
+    <link rel="icon" href="img/logo kabpaser.png" type="image/x-icon">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background-color: #2e7d32;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #1b5e20;
+            transform: translateX(-5px);
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #2c3e50;
+            font-size: 2.5em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .destinations-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            padding: 20px;
+        }
+
+        .destination-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: all 0.4s ease;
+        }
+
+        .destination-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 30px;
+        }
+
+        .card-title {
+            font-size: 1.8em;
+            color: #34495e;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .card-description {
+            color: #7f8c8d;
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .card-button {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+        }
+
+        .card-button:hover {
+            background-color: #1b5e20;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .destinations-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .page-title {
+                font-size: 2em;
+            }
+
+            .card-image {
+                height: 250px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    
+    <div class="container">
+        <a href="javascript:history.back()" class="back-button">
+            <i class="fas fa-arrow-left"></i> Kembali
+        </a>
+
+        <h1 class="page-title">Hayati Tourism Destinations</h1>
+
+        <div class="destinations-grid">
+            <!-- Destination Card 1 -->
+            <div class="destination-card">
+                <img src="https://source.unsplash.com/random/1200x800?mountain" alt="Mountain Destination"
+                    class="card-image">
+                <div class="card-content">
+                    <h3 class="card-title">Mountain Vista Premium</h3>
+                    <p class="card-description">Nikmati pemandangan gunung spektakuler dengan tur eksklusif kami. Paket
+                        termasuk pendakian berpemandu, akomodasi bintang 4, dan fasilitas premium. Cocok untuk
+                        petualangan maupun relaksasi dengan pemandangan alam terbaik.</p>
+                    <a href="#" class="card-button">Explore Package</a>
+                </div>
+            </div>
+
+            <!-- Destination Card 2 -->
+            <div class="destination-card">
+                <img src="https://source.unsplash.com/random/1200x800?beach" alt="Beach Destination" class="card-image">
+                <div class="card-content">
+                    <h3 class="card-title">Golden Beach Resort</h3>
+                    <p class="card-description">Pantai berpasir putih dengan air jernih kebiruan. Resort mewah kami
+                        menawarkan villa pribadi, spa pantai, dan berbagai aktivitas air premium. Pengalaman liburan
+                        pantai tak terlupakan dengan layanan istimewa.</p>
+                    <a href="#" class="card-button">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
