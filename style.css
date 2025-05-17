@@ -1350,14 +1350,14 @@ form textarea {
     height: 300px;
 }
 
-/* Tablet (portrait dan landscape) */
+/* Tablet */
 @media screen and (max-width: 1024px) {
     .video-wrapper {
       right: 5%;
     }
   }
 
-/* HP besar (misalnya iPhone Plus, Galaxy Note) */
+/* HP besar */
 @media screen and (max-width: 768px) {
     .video-wrapper {
       width: 90%;
@@ -1366,7 +1366,7 @@ form textarea {
     }
 }
 
-/* HP kecil (misalnya iPhone SE, Android kecil) */
+/* HP kecil */
 @media screen and (max-width: 480px) {
     .video-wrapper {
       width: 95%;
