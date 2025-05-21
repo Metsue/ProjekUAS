@@ -461,6 +461,108 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// Komentar Pengunjung
+document.addEventListener('DOMContentLoaded', function() {
+    // Inisialisasi array untuk menyimpan komentar
+    let comments = [];
+
+    // Form komentar
+    const commentForm = document.getElementById('comment-form');
+    const commentsContainer = document.getElementById('comments-container');
+    const testimonialSlider = document.querySelector('.testimonial-slider');
+
+    // Fungsi untuk menampilkan komentar
+    function displayComments() {
+        commentsContainer.innerHTML = '<h3>Komentar Pengunjung:</h3>';
+        
+        if (comments.length === 0) {
+            commentsContainer.innerHTML += '<p>Belum ada komentar. Jadilah yang pertama berkomentar!</p>';
+            return;
+        }
+
+        comments.forEach(comment => {
+            const commentElement = document.createElement('div');
+            commentElement.className = 'comment-item';
+            commentElement.innerHTML = `
+                <div class="comment-content">
+                    <p>"${comment.text}"</p>
+                    <div class="comment-author">
+                        <strong>${comment.name}</strong>
+                        <span>${new Date(comment.date).toLocaleDateString('id-ID')}</span>
+                    </div>
+                </div>
+            `;
+            commentsContainer.appendChild(commentElement);
+        });
+    }
+
+    // Fungsi untuk menambahkan komentar ke testimoni
+    function addToTestimonials(comment) {
+        const testimonialItem = document.createElement('div');
+        testimonialItem.className = 'testimonial-item';
+        testimonialItem.innerHTML = `
+            <div class="testimonial-content">
+                <p>${comment.text}</p>
+                <div class="testimonial-author">
+                    <div class="author-info">
+                        <h4>${comment.name}</h4>
+                        <span>Pengunjung</span>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        // Tambahkan testimoni baru ke slider
+        testimonialSlider.insertBefore(testimonialItem, testimonialSlider.querySelector('.slider-controls'));
+    }
+
+    // Handle form submission
+    commentForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const name = document.getElementById('comment-name').value.trim();
+        const text = document.getElementById('comment-text').value.trim();
+        
+        if (name && text) {
+            const newComment = {
+                name: name,
+                text: text,
+                date: new Date().toISOString()
+            };
+            
+            // Tambahkan komentar ke array
+            comments.push(newComment);
+            
+            // Simpan ke localStorage
+            localStorage.setItem('desa-modang-comments', JSON.stringify(comments));
+            
+            // Tampilkan komentar
+            displayComments();
+            
+            // Tambahkan ke testimoni
+            addToTestimonials(newComment);
+            
+            // Reset form
+            commentForm.reset();
+            
+            // Tampilkan notifikasi
+            alert('Terima kasih atas komentar Anda! Komentar telah ditambahkan.');
+        }
+    });
+
+    // Load komentar dari localStorage saat halaman dimuat
+    const savedComments = localStorage.getItem('desa-modang-comments');
+    if (savedComments) {
+        comments = JSON.parse(savedComments);
+        displayComments();
+        
+        // Tambahkan komentar yang ada ke testimoni
+        comments.forEach(comment => {
+            addToTestimonials(comment);
+        });
+    }
+});
+
 // ==================== FUNGSI UNTUK SLIDE APARATUR (LEGACY) ====================
 let geserPosisi = 0;
 const slider = document.getElementById('sliderAparatur');
