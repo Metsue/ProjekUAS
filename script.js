@@ -416,6 +416,49 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     
     initAll();
+
+    // ==================== KOMENTAR DINAMIS ====================
+    const commentForm = document.getElementById('comment-form');
+    const commentsContainer = document.getElementById('comments-container');
+
+    commentForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        const nameInput = document.getElementById('comment-name');
+        const commentInput = document.getElementById('comment-text');
+
+        const name = nameInput.value.trim();
+        const comment = commentInput.value.trim();
+
+        if (name === '' || comment === '') {
+            alert('Mohon isi nama dan komentar Anda.');
+            return;
+        }
+
+        // Buat elemen komentar baru
+        const commentElement = document.createElement('div');
+        commentElement.classList.add('visitor-comment');
+        commentElement.style.marginBottom = '15px';
+        commentElement.style.padding = '10px';
+        commentElement.style.border = '1px solid #ccc';
+        commentElement.style.borderRadius = '5px';
+        commentElement.style.backgroundColor = 'rgba(255, 255, 255, 0.1)';
+
+        commentElement.innerHTML = `
+            <p style="margin: 0;"><strong>${name}</strong></p>
+            <p style="margin: 5px 0 0 0;">${comment}</p>
+        `;
+
+        // Tambahkan komentar ke container
+        commentsContainer.appendChild(commentElement);
+
+        // Scroll ke komentar terbaru
+        commentsContainer.scrollTop = commentsContainer.scrollHeight;
+
+        // Bersihkan input form
+        nameInput.value = '';
+        commentInput.value = '';
+    });
 });
 
 // ==================== FUNGSI UNTUK SLIDE APARATUR (LEGACY) ====================
