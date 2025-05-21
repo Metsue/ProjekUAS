@@ -390,16 +390,20 @@
         </section>
 
         <!-- Komentar Untuk Pengunjung -->
-        <form>
+        <form id="comment-form">
             <h3 style="color: white;"><b>KIRIM KOMENTAR</b></h3>
             <label style="color: white;">Nama</label>
-            <input type="text">
+            <input type="text" id="comment-name" required>
 
             <label style="color: white;">Komentar</label>
-            <textarea rows="4" placeholder="Silahkan tulis komentar anda..." required></textarea>
+            <textarea id="comment-text" rows="4" placeholder="Silahkan tulis komentar anda..." required></textarea>
 
-            <button class="submit-btn">Kirim</button>
+            <button class="submit-btn" type="submit">Kirim</button>
         </form>
+        <div id="comments-container" style="margin-top: 20px; color: white;">
+            <h3>Komentar Pengunjung:</h3>
+            <!-- Comments will be appended here -->
+        </div>
 
         <!-- Testimoni Dari Pengunjung -->
         <section class="testimonials">
@@ -422,7 +426,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> 
 
                     <div class="testimonial-item">
                         <div class="testimonial-content">
