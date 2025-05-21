@@ -1,0 +1,40 @@
+{
+  "pengelola": [
+    {
+      "nama": "DINA WAHYUNI",
+      "jabatan": "KASI KESEJAHTERAAN",
+      "foto": "img/dina.jpg",
+      "sosmed": {
+        "wa": "6285220216894",
+        "email": "dina@paserkab.go.id"
+      }
+    },
+    {
+      "nama": "MAGENI KARSA SAIDUL, S.Kom",
+      "jabatan": "KASI PEMERINTAHAN",
+      "foto": "img/mageni.jpg",
+      "sosmed": {
+        "wa": "6285220216894",
+        "email": "mageni@paserkab.go.id"
+      }
+    },
+    {
+      "nama": "SADANI NOOR ELYATI PURBA, S.Si",
+      "jabatan": "KASI PELAYANAN",
+      "foto": "img/sadani.jpg",
+      "sosmed": {
+        "wa": "6285220216894",
+        "email": "sadani@paserkab.go.id"
+      }
+    },
+    {
+      "nama": "NUR ASYIAH, S.IP",
+      "jabatan": "KAUR KEUANGAN",
+      "foto": "img/nurasyiah.jpg",
+      "sosmed": {
+        "wa": "6285220216894",
+        "email": "nur@paserkab.go.id"
+      }
+    }
+  ]
+}
