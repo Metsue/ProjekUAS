@@ -479,3 +479,106 @@ function geserKiri() {
     slider.style.transform = `translateX(${geserPosisi}px)`;
   }
 }
+
+// Gallery Slideshow
+function initGallerySlideshow() {
+    const galleryImages = [
+        { src: "img/picture1.jpg", alt: "Pemandangan alam Desa Modang", caption: "Pemandangan alam yang menakjubkan" },
+        { src: "img/picture2.jpg", alt: "Air terjun di Desa Modang", caption: "Air terjun yang jernih dan segar" },
+        { src: "img/picture3.jpg", alt: "Flora khas Desa Modang", caption: "Keanekaragaman flora lokal" },
+        { src: "img/picture4.jpg", alt: "Fauna Desa Modang", caption: "Satwa liar yang dilindungi" },
+        { src: "img/picture5.jpg", alt: "Aktivitas warga", caption: "Kegiatan masyarakat sehari-hari" },
+        { src: "img/air terjun doyam seriam.jpg", alt: "Air Terjun Doyam Seriam", caption: "Air Terjun Doyam Seriam" },
+        { src: "img/air terjun olo.jpg", alt: "Air Terjun Olo", caption: "Air Terjun Olo yang eksotis" }
+    ];
+
+    const slideshowContainer = document.querySelector('.slideshow-container');
+    const dotsContainer = document.querySelector('.slide-dots');
+    let currentSlide = 0;
+    let slideshowInterval;
+
+    // Create slides and dots
+    galleryImages.forEach((image, index) => {
+        // Create slide
+        const slide = document.createElement('div');
+        slide.className = `slide ${index === 0 ? 'active' : ''}`;
+        slide.innerHTML = `
+            <img src="${image.src}" alt="${image.alt}" loading="lazy">
+            <div class="slide-caption">${image.caption}</div>
+        `;
+        slideshowContainer.appendChild(slide);
+
+        // Create dot
+        const dot = document.createElement('div');
+        dot.className = `dot ${index === 0 ? 'active' : ''}`;
+        dot.dataset.index = index;
+        dotsContainer.appendChild(dot);
+    });
+
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.querySelector('.prev-slide');
+    const nextBtn = document.querySelector('.next-slide');
+
+    // Function to change slide
+    function goToSlide(index) {
+        slides.forEach(slide => slide.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        currentSlide = (index + slides.length) % slides.length;
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+    }
+
+    // Next slide
+    function nextSlide() {
+        goToSlide(currentSlide + 1);
+    }
+
+    // Previous slide
+    function prevSlide() {
+        goToSlide(currentSlide - 1);
+    }
+
+    // Auto play
+    function startSlideshow() {
+        slideshowInterval = setInterval(nextSlide, 1000);
+    }
+
+    // Event listeners
+    nextBtn.addEventListener('click', () => {
+        nextSlide();
+        resetInterval();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        prevSlide();
+        resetInterval();
+    });
+
+    dots.forEach(dot => {
+        dot.addEventListener('click', () => {
+            goToSlide(parseInt(dot.dataset.index));
+            resetInterval();
+        });
+    });
+
+    // Reset interval when user interacts
+    function resetInterval() {
+        clearInterval(slideshowInterval);
+        startSlideshow();
+    }
+
+    // Pause on hover
+    slideshowContainer.addEventListener('mouseenter', () => {
+        clearInterval(slideshowInterval);
+    });
+
+    slideshowContainer.addEventListener('mouseleave', startSlideshow);
+
+    // Start the slideshow
+    startSlideshow();
+}
+
+// Panggil fungsi saat dokumen siap
+document.addEventListener('DOMContentLoaded', initGallerySlideshow);
