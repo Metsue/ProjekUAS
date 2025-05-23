@@ -2,174 +2,190 @@
 <html lang="id">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Desa Wisata Modang - Jelajahi keindahan alam dan budaya Kalimantan Timur">
-    <meta name="keywords" content="desa wisata, modang, kalimantan timur, wisata alam, air terjun, budaya dayak">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Desa Wisata Modang - Jelajahi keindahan alam dan budaya Kalimantan Timur" />
+  <meta name="keywords" content="desa wisata, modang, kalimantan timur, wisata alam, air terjun, budaya dayak" />
+  <title>Desa Wisata Modang | Kalimantan Timur</title>
+  <link rel="icon" href="img/logo kabpaser.png" type="image/x-icon" />
 
-    <title>Desa Wisata Modang | Kalimantan Timur</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
 
-    <!-- favicon -->
-    <link rel="icon" href="img/logo kabpaser.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', sans-serif;
-        }
+    body {
+      background-color: #f5f5f5;
+    }
 
-        body {
-            background-color: #f5f5f5;
-            padding: 40px 20px;
-        }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+    .back-button {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 10px 20px;
+      background-color: #2e7d32;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
 
-        .back-button {
-            display: inline-block;
-            margin-bottom: 20px;
-            padding: 10px 20px;
-            background-color: #2e7d32;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-        }
+    .back-button:hover {
+      background-color: #1b5e20;
+      transform: translateX(-5px);
+    }
 
-        .back-button:hover {
-            background-color: #1b5e20;
-            transform: translateX(-5px);
-        }
+    .page-title {
+      width: 100%;
+      text-align: center;
+      padding: 100px 20px;
+      color: white;
+      font-size: 3em;
+      background: url('img/picture1.jpg') center/cover no-repeat;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
 
-        .page-title {
-            text-align: center;
-            margin-bottom: 40px;
-            color: #2c3e50;
-            font-size: 2.5em;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
+  
 
-        .destinations-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 40px;
-            padding: 20px;
-        }
+    .destination-section {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+    }
 
-        .destination-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-            transition: all 0.4s ease;
-        }
+    .destination {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      transition: all 0.3s ease;
+    }
 
-        .destination-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-        }
+    .destination.reverse {
+      flex-direction: row-reverse;
+    }
 
-        .card-image {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-        }
+    .destination-img {
+      width: 50%;
+      height: auto;
+      border-radius: 15px;
+      object-fit: cover;
+    }
 
-        .card-content {
-            padding: 30px;
-        }
+    .destination-text {
+      width: 50%;
+    }
 
-        .card-title {
-            font-size: 1.8em;
-            color: #34495e;
-            margin-bottom: 15px;
-            font-weight: 600;
-        }
+    .card-title {
+      font-size: 1.8em;
+      color: #34495e;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
 
-        .card-description {
-            color: #7f8c8d;
-            font-size: 1.1em;
-            line-height: 1.6;
-            margin-bottom: 25px;
-        }
+    .card-description {
+      color: #7f8c8d;
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
 
-        .card-button {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: #3498db;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: 500;
-            font-size: 1.1em;
-            transition: all 0.3s ease;
-        }
+    .card-button {
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: #3498db;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 500;
+      font-size: 1.1em;
+      transition: all 0.3s ease;
+    }
 
-        .card-button:hover {
-            background-color: #1b5e20;
-            transform: scale(1.05);
-        }
+    .card-button:hover {
+      background-color: #1b5e20;
+      transform: scale(1.05);
+    }
 
-        @media (max-width: 768px) {
-            .destinations-grid {
-                grid-template-columns: 1fr;
-            }
+    @media (max-width: 768px) {
+      .destination {
+        flex-direction: column;
+      }
 
-            .page-title {
-                font-size: 2em;
-            }
+      .destination.reverse {
+        flex-direction: column;
+      }
 
-            .card-image {
-                height: 250px;
-            }
-        }
-    </style>
+      .destination-img,
+      .destination-text {
+        width: 100%;
+      }
+
+      .destination-img {
+        height: 250px;
+      }
+
+      .page-title {
+        font-size: 2em;
+        padding: 60px 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
-    <div class="container">
-        <a href="javascript:history.back()" class="back-button">
-            <i class="fas fa-arrow-left"></i> Kembali
-        </a>
+  <!-- Full Width Header -->
+  <div class="page-title">Destinasi Wisata Desa Modang</div>
 
-        <h1 class="page-title">Destinasi Wisata Desa Modang</h1>
+  <!-- Content Container -->
+  <div class="container">
+    <a href="javascript:history.back()" class="back-button">Kembali</a>
 
-        <div class="destinations-grid">
-            <!-- Destination Card 1 -->
-            <div class="destination-card">
-                <img src="img/doyam-seriamair.jpeg" alt="Doyam Seriam" class="card-image">
-                <div class="card-content">
-                    <h3 class="card-title">Air Terjun Doyam Seriam</h3>
-                    <p class="card-description">Air Terjun Doyam Seriam adalah salah satu keajaiban alam yang
-                        menakjubkan di Desa Modang. Dengan ketinggian yang menjulang dan aliran air yang jernih, tempat
-                        ini menawarkan pemandangan yang memukau serta suasana yang menenangkan. Dikelilingi oleh hutan
-                        tropis yang rimbun, pengunjung dapat menikmati keindahan alam sambil mendengarkan suara
-                        gemericik air yang menyejukkan. </p>
-                    <a href="https://wa.me/6283137970669" class="card-button">Book Now</a>
-                </div>
-            </div>
-
-            <!-- Destination Card 2 -->
-            <div class="destination-card">
-                <img src="img/doyam-dinding-olo.jpeg" alt="Doyam Olo" class="card-image">
-                <div class="card-content">
-                    <h3 class="card-title">Air Terjun Dinding Olo</h3>
-                    <p class="card-description">Dinding Olo adalah formasi batuan alami yang menakjubkan, menjadi salah
-                        satu daya tarik utama di Desa Modang. Dikenal dengan keindahan alamnya yang unik, Dinding Olo
-                        menawarkan panorama yang spektakuler dan menjadi tempat yang ideal untuk para pecinta fotografi
-                        dan petualangan.</p>
-                    <a href="https://wa.me/6283137970669" class="card-button">Book Now</a>
-                </div>
-            </div>
+    <div class="destination-section">
+      <!-- Wisata 1 -->
+      <div class="destination">
+        <img src="img/doyam_seriam_final.png" alt="Air Terjun Doyam Seriam" class="destination-img" />
+        <div class="destination-text">
+          <h3 class="card-title">Air Terjun Doyam Seriam</h3>
+          <p class="card-description">
+            Air Terjun Doyam Seriam adalah salah satu keajaiban alam yang menakjubkan di Desa Modang. Dengan ketinggian
+            yang menjulang dan aliran air yang jernih, tempat ini menawarkan pemandangan yang memukau serta suasana
+            yang menenangkan. Dikelilingi oleh hutan tropis yang rimbun, pengunjung dapat menikmati keindahan alam
+            sambil mendengarkan suara gemericik air yang menyejukkan.
+          </p>
+          <a href="https://wa.me/6283137970669" class="card-button">Book Now</a>
         </div>
+      </div>
+
+      <!-- Wisata 2 -->
+      <div class="destination reverse">
+        <img src="img/dinding olo2.PNG" alt="Air Terjun Dinding Olo" class="destination-img" />
+        <div class="destination-text">
+          <h3 class="card-title">Air Terjun Dinding Olo</h3>
+          <p class="card-description">
+            Dinding Olo adalah formasi batuan alami yang menakjubkan, menjadi salah satu daya tarik utama di Desa
+            Modang. Dikenal dengan keindahan alamnya yang unik, Dinding Olo menawarkan panorama yang spektakuler dan
+            menjadi tempat yang ideal untuk para pecinta fotografi dan petualangan.
+          </p>
+          <a href="https://wa.me/6283137970669" class="card-button">Book Now</a>
+        </div>
+      </div>
     </div>
+  </div>
 </body>
 
 </html>
